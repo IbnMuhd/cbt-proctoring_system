@@ -1,1 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the CBT System</h1>
+    <ul>
+        {% for exam in exams %}
+        <li><a href="{{ url_for('take_exam', exam_id=exam.id) }}">{{ exam.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
 
